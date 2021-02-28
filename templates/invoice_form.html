@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Piastrix</title>
+</head>
+<body>
+    <H2>Подтвердите отправку формы что бы продоржить</H2>
+    {% for key, val in params %}
+            <input disabled value="{{ val }}"/></br>
+    {% endfor %}
+    <form method="{{ method }}" action="{{ url }}">
+        <input type="submit" value="Подтвердить"/>
+        {% for key, val in params %}
+            <input name="{{ key }}" type="hidden" value="{{ val }}"/></br>
+        {% endfor %}
+    </form>
+</body>
+</html>

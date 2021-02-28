@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Piastrix</title>
+</head>
+<body>
+    <form name="Pay" method="post" action="/make_payment/" accept-charset="UTF-8">
+        <input name="amount" required placeholder="Сумма"/></br>
+        <select name="currency" required>
+            <option value="{{ currency.EUR }}">EUR</option>
+            <option value="{{ currency.USD }}">USD</option>
+            <option value="{{ currency.RUB }}">RUB</option>
+        </select></br>
+        <input type="textarea" name="description" placeholder="Описание платежа"/></br>
+        <input type="submit" value="Оплатить"/>
+    </form>
+</body>
+</html>
